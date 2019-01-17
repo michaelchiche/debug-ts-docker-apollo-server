@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+      - '9229:9229'
+    volumes:
+      - ./src:/app/src
+      - ./dist:/app/dist
+    entrypoint: npm run start

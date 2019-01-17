@@ -1,0 +1,23 @@
+{
+  "name": "debug-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all dev:build -p dev:watch dev:nodemon",
+    "dev:nodemon": "nodemon --inspect=0.0.0.0:9229 dist/index.js",
+    "dev:build": "parcel build src/index.ts --out-dir dist --target node --public-url .",
+    "dev:watch": "parcel watch src/index.ts --out-dir dist --target node --public-url ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.3.1",
+    "graphql": "^14.1.1",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.11.0",
+    "typescript": "^3.2.2"
+  }
+}
